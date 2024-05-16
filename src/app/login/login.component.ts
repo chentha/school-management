@@ -20,9 +20,9 @@ export class LoginComponent {
 
   constructor(private router: Router) { }
   ngOnInit(): void {
-    if(localStorage.getItem('card')) {
-      this.router.navigate(['']);
-    }
+    // if(localStorage.getItem('card')) {
+    //   this.router.navigate(['']);
+    // }
   }
   
   submitForm() {

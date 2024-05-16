@@ -1,11 +1,31 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit, OnDestroy, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
+
+  futureDate = new Date("2024-05-20T00:00:00");
+  timeFuture = this.futureDate.getTime();
+  countdown: number | null = null;
+
+
+  constructor(private elementRef: ElementRef) { }
+
+  ngOnInit() {
+    this.initDropdownMenu();
+    this.initLinkChooser();
+    this.counter();
+    this.countdown = setInterval(() => this.counter(), 1000) as unknown as number;
+  }
+
+  ngOnDestroy() {
+    if (this.countdown !== null) {
+      clearInterval(this.countdown);
+    }
+  }
 
   @HostListener('mouseover', ['$event'])
   onHover(event: MouseEvent) {
@@ -51,34 +71,48 @@ export class HomeComponent {
     }
   }
 
+  isDropdownOpen: boolean = false;
 
-  futureDate = new Date("2024-05-20T00:00:00"); // Example future date
-  timeFuture = this.futureDate.getTime();
-  countdown: number | null = null; // Use number instead of NodeJS.Timeout
+  @HostListener('document:click', ['$event'])
+  clickout(event: any) {
+    if (!this.elementRef.nativeElement.contains(event.target)) {
+      this.closeDropdown();
+    }
+  }
 
-  constructor() {
 
-    this.counter();
-    this.countdown = setInterval(() => this.counter(), 1000) as any; // Use setInterval instead of setTimeout
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  closeDropdown() {
+    this.isDropdownOpen = false;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const element = document.querySelector('.navbar') as HTMLElement;
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('navbar-inverse');
+    } else {
+      element.classList.remove('navbar-inverse');
+    }
   }
 
   counter() {
     const timeNow = new Date().getTime();
-
     const t = this.timeFuture - timeNow;
 
     const oneDay = 24 * 60 * 60 * 1000;
     const oneHour = 60 * 60 * 1000;
     const oneMinute = 60 * 1000;
 
-    let days = Math.floor(t / oneDay);
-    let hours = Math.floor((t % oneDay) / oneHour);
-    let minutes = Math.floor((t % oneHour) / oneMinute);
-    let seconds = Math.floor((t % oneMinute) / 1000);
+    const days = Math.floor(t / oneDay);
+    const hours = Math.floor((t % oneDay) / oneHour);
+    const minutes = Math.floor((t % oneHour) / oneMinute);
+    const seconds = Math.floor((t % oneMinute) / 1000);
 
-    function format(item: number): string {
-      return item < 10 ? `0${item}` : item.toString();
-    }
+    const format = (item: number): string => item < 10 ? `0${item}` : item.toString();
 
     const daysElement = document.querySelector('.days .number');
     const hoursElement = document.querySelector('.hours .number');
@@ -92,7 +126,7 @@ export class HomeComponent {
       secondsElement.textContent = format(seconds);
     }
 
-    if (t < 0 && this.countdown !== null) { // Check if countdown is not null
+    if (t < 0 && this.countdown !== null) {
       clearInterval(this.countdown);
       const countdownElement = document.getElementById('countdown');
       if (countdownElement) {
@@ -101,16 +135,60 @@ export class HomeComponent {
     }
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const element = document.querySelector('.navbar') as HTMLElement;
-    if (window.pageYOffset > element.clientHeight) {
-      element.classList.add('navbar-inverse');
-    } else {
-      element.classList.remove('navbar-inverse');
+  private initDropdownMenu() {
+    const linkClick = document.querySelector('.dropdown') as HTMLElement | null;
+    const linkToShow = document.querySelector('a.nav-link.dropdown-toggle') as HTMLElement | null;
+    const linkContentToShow = document.querySelector('ul.dropdown-menu') as HTMLElement | null;
+
+    if (linkClick && linkToShow && linkContentToShow) {
+      if (window.screen.width >= 992) {
+        linkClick.addEventListener('mousemove', () => {
+          linkToShow.classList.add('show');
+          linkContentToShow.classList.add('show');
+        });
+        linkClick.addEventListener('mouseleave', () => {
+          linkToShow.classList.remove('show');
+          linkContentToShow.classList.remove('show');
+        });
+      } else {
+        linkClick.addEventListener('click', (event) => {
+          event.preventDefault();
+          linkToShow.classList.toggle('show');
+          linkContentToShow.classList.toggle('show');
+        });
+      }
     }
   }
 
+  private initLinkChooser() {
+    const linkToChoose = document.querySelectorAll('li.list-category') as NodeListOf<HTMLElement>;
+    const contentWhyUs = document.querySelectorAll('.why') as NodeListOf<HTMLElement>;
 
+    linkToChoose.forEach((element) => {
+      element.addEventListener('click', (e: Event) => {
+        contentWhyUs.forEach((elem) => {
+          elem.classList.add('hide');
+        });
+
+        const linkClass = (e.currentTarget as HTMLElement).classList;
+        if (linkClass.contains('best')) {
+          const bestElement = document.querySelector('.why.best') as HTMLElement | null;
+          if (bestElement) {
+            bestElement.classList.remove('hide');
+          }
+        } else if (linkClass.contains('quality')) {
+          const qualityElement = document.querySelector('.why.quality') as HTMLElement | null;
+          if (qualityElement) {
+            qualityElement.classList.remove('hide');
+          }
+        } else if (linkClass.contains('top')) {
+          const topElement = document.querySelector('.why.top') as HTMLElement | null;
+          if (topElement) {
+            topElement.classList.remove('hide');
+          }
+        }
+      });
+    });
+  }
 
 }

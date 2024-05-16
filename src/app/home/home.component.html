@@ -7,19 +7,18 @@
                 class="container navbar fixed-top navbar-expand-lg navbar-dark nav-color text-uppercase">
                 <div class="container box_nav">
                     <a class="navbar-brand logo" href="#"><span>GRAD</span> SCHOOL</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+                        aria-label="Toggle navigation" (click)="toggleDropdown()">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse navbar-position" id="navbarNavDropdown">
+                    <div class="collapse navbar-collapse navbar-position" id="navbarNavDropdown"
+                        [ngClass]="{'show': isDropdownOpen}">
                         <ul class="navbar-nav">
                             <li class="nav-item list-style">
                                 <a class="nav-link active" aria-current="page" href="">Home</a>
                             </li>
                             <li class="nav-item dropdown list-style">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button">
                                     about us
                                 </a>
                                 <ul class="dropdown-menu nav-color" aria-labelledby="navbarDropdownMenuLink">
@@ -38,11 +37,12 @@
                             <li class="nav-item list-style">
                                 <a class="nav-link" routerLink="/login">Login</a>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>
             </nav>
+
+
 
             <!-- vidéo -->
             <div id="home" class="overlay"></div>
@@ -484,7 +484,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <textarea class="form-control" id="exampleFormControlTextarea1"

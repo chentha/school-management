@@ -1012,5 +1012,59 @@ footer p {
         font-size: 8px;
     }
 
+
+    .navbar-collapse {
+        width: 100%;
+        display: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100%; /* Position the dropdown menu below the navbar */
+        left: 0;
+        background-color: #343a40; /* Set background color */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+        z-index: 1000; /* Ensure dropdown is above other elements */
+        transition: all 0.3s ease; /* Add smooth transition */
+      }
+    
+      .navbar-collapse.show {
+        display: block; /* Show the dropdown menu when active */
+      }
+    
+      .navbar-nav {
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 10px; /* Add padding for better spacing */
+      }
+    
+      .nav-item {
+        margin: 0; /* Reset margin for navbar items */
+      }
+    
+      .nav-link {
+        padding: 10px 20px; /* Add padding to navbar links */
+        color: #fff; /* Set text color */
+      }
+    
+      .dropdown-menu {
+        position: static; /* Reset position for dropdown menu */
+        opacity: 1; /* Ensure dropdown menu is fully visible */
+        display: none; /* Hide dropdown menu by default */
+      }
+    .dropdown-toggle{
+        display: block;
+    }
+      .dropdown-menu.show {
+        display: block; /* Show dropdown menu when active */
+      }
+    
+      .dropdown-item {
+        color: #fff; /* Set text color for dropdown items */
+        padding: 10px 20px; /* Add padding for better spacing */
+      }
+    
+      .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Add hover effect */
+      }
+    
   
 }

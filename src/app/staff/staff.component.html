@@ -1,1 +1,177 @@
-<p>staff works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<div class="test">
+    <div class="big_size">
+    <div class="secound_box">
+        <header>
+            <nav id="navbar-scroll-boo" (scroll)="onWindowScroll1();"
+                class="container navbar fixed-top navbar-expand-lg navbar-dark nav-color text-uppercase">
+                <div class="container box_nav">
+                    <img width="45px" height="45px" style="border-radius: 50%; margin-top: 0px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4e7OOViLR--L624tl4xy_uvHfX9km0sTvldexRhHWMA&s" alt="">
+                    <a class="navbar-brand logo" href="#">Chentha</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+                        aria-label="Toggle navigation" (click)="toggleDropdown()">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse navbar-position" id="navbarNavDropdown"
+                        [ngClass]="{'show': isDropdownOpen}">
+                        <ul class="navbar-nav">
+                            <li class="nav-item list-style">
+                                <a class="nav-link active" aria-current="page" href="">Home</a>
+                            </li>
+                            <li class="nav-item list-style">
+                                <a class="nav-link" href="#contact">About me</a>
+                            </li>
+                            <li class="nav-item list-style">
+                                <a class="nav-link" routerLink="">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <section class="main_box">
+            <div class="container">
+                <div class="box_name_staff">
+                    <div class="line_under_text"></div>
+                    <h1>Chentha <br> Hour</h1>
+                    <h3>STAFF</h3>
+                </div>
+            </div>
+        </section>
+
+
+        <div >
+            <section id="whoWeAre" class="whyUs">
+                <div class="container">
+                    <h1 class="text_title" style="font-weight: 700;">Attendence Staff</h1>
+                    <p style="margin-bottom: 20px;">The attendance staff plays a vital role in ensuring accurate and timely tracking of employee presence. They are responsible for a variety of tasks, including</p>
+                    
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Staff Name</th>
+                              <th>Subject</th>
+                              <th>Start Time</th>
+                              <th>End Time</th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                      <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <tbody>
+                            <tr>
+                              <td>AAC</td>
+                              <td>AUSTRALIAN COMPANY </td>
+                              <td>$1.38</td>
+                              <td>+2.01</td>
+                              <td>-0.36%</td>
+                            </tr>
+                            <tr>
+                              <td>AAD</td>
+                              <td>AUSENCO</td>
+                              <td>$2.38</td>
+                              <td>-0.01</td>
+                              <td>-1.36%</td>
+                            </tr>
+                            <tr>
+                              <td>AAX</td>
+                              <td>ADELAIDE</td>
+                              <td>$3.22</td>
+                              <td>+0.01</td>
+                              <td>+1.36%</td>
+                            </tr>
+                            <tr>
+                              <td>XXD</td>
+                              <td>ADITYA BIRLA</td>
+                              <td>$1.02</td>
+                              <td>-1.01</td>
+                              <td>+2.36%</td>
+                            </tr>
+                            <tr>
+                              <td>AAC</td>
+                              <td>AUSTRALIAN COMPANY </td>
+                              <td>$1.38</td>
+                              <td>+2.01</td>
+                              <td>-0.36%</td>
+                            </tr>
+                            <tr>
+                              <td>AAD</td>
+                              <td>AUSENCO</td>
+                              <td>$2.38</td>
+                              <td>-0.01</td>
+                              <td>-1.36%</td>
+                            </tr>
+                            <tr>
+                              <td>AAX</td>
+                              <td>ADELAIDE</td>
+                              <td>$3.22</td>
+                              <td>+0.01</td>
+                              <td>+1.36%</td>
+                            </tr>
+                            <tr>
+                              <td>XXD</td>
+                              <td>ADITYA BIRLA</td>
+                              <td>$1.02</td>
+                              <td>-1.01</td>
+                              <td>+2.36%</td>
+                            </tr>
+                        
+                            <tr>
+                              <td>AAX</td>
+                              <td>ADELAIDE</td>
+                              <td>$3.22</td>
+                              <td>+0.01</td>
+                              <td>+1.36%</td>
+                            </tr>
+                            <tr>
+                              <td>XXD</td>
+                              <td>ADITYA BIRLA</td>
+                              <td>$1.02</td>
+                              <td>-1.01</td>
+                              <td>+2.36%</td>
+                            </tr>
+                            <tr>
+                              <td>AAC</td>
+                              <td>AUSTRALIAN COMPANY </td>
+                              <td>$1.38</td>
+                              <td>+2.01</td>
+                              <td>-0.36%</td>
+                            </tr>
+                            <tr>
+                              <td>AAD</td>
+                              <td>AUSENCO</td>
+                              <td>$2.38</td>
+                              <td>-0.01</td>
+                              <td>-1.36%</td>
+                            </tr>
+                        
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                </div>
+            </section>
+
+        </div>
+        <footer class="footer1">
+            <div class="footer2">
+                <p>
+                    <i class="fa fa-copyright"></i> COPYRIGHT <span id="date"></span> BY GRAD SCHOOL build by <a
+                        href="https://github.com/zineb2003" target="_blank">Chentha</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+</div>
+
+<router-outlet></router-outlet>
