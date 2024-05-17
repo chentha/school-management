@@ -6,63 +6,62 @@
     padding: 0;
 }
 
-.lesson
-.container {
+.lesson .container {
     position: relative;
     width: 400px;
-  
+
     .header {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
     }
-  
+
     .item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-      margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin: 0 10px;
     }
-  
+
     .info-course {
-      margin-top: 10px;
-  
-      h4 {
-        margin-bottom: 10px;
-      }
-  
-      p {
-        font-size: 14px;
-      }
-  
-      .info-fo {
         margin-top: 10px;
-  
-        img {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          margin-right: 10px;
+
+        h4 {
+            margin-bottom: 10px;
         }
-  
-        .pay {
-          color: #ff6347; // Or any color you prefer for paid courses
+
+        p {
+            font-size: 14px;
         }
-  
-        .free {
-          color: #32cd32; // Or any color you prefer for free courses
+
+        .info-fo {
+            margin-top: 10px;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .pay {
+                color: #ff6347; 
+            }
+
+            .free {
+                color: #32cd32; 
+            }
         }
-      }
     }
-  }
-  
- :root {
+}
+
+:root {
     --color-blue: #3CF;
     --color-jaune: #FC3;
     --background-head: rgba(250, 250, 250, 0.1);
@@ -74,8 +73,8 @@
 
 .navbar-inverse {
     max-width: 100%;
-    background-color:#121b2f; 
-  }
+    background-color: #121b2f;
+}
 
 
 .hide {
@@ -90,9 +89,6 @@ ul li {
     list-style-type: none;
 }
 
-
-
-
 /********************header*****************************/
 
 header {
@@ -100,7 +96,6 @@ header {
     height: 100vh;
     overflow: hidden;
 }
-
 
 /****nav***/
 
@@ -110,8 +105,6 @@ nav {
     justify-content: center;
     margin: auto;
 }
-
-
 
 .nav-color {
     width: 100%;
@@ -148,7 +141,6 @@ nav {
     color: #f5a425;
 }
 
-
 /*color nav**/
 
 a#navbarDropdownMenuLink,
@@ -180,7 +172,6 @@ a.nav-link:hover {
 .dropdown-style:hover {
     color: #f5a425;
 }
-
 
 /******************description*************/
 
@@ -221,17 +212,11 @@ a.nav-link:hover {
     border-radius: 0;
 }
 
-
 /****vidéo****/
 
 header video {
     position: absolute;
     overflow: hidden;
-    /* top: 0;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0; */
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -252,18 +237,16 @@ header .overlay {
     opacity: .8;
     z-index: 1;
 }
-
-
 /********************END header*****************************/
-
 
 /******footer header*******/
 
-.features{
+.features {
     display: flex;
     justify-content: center;
     margin: auto;
 }
+
 .features-post {
     z-index: 30;
     position: relative;
@@ -314,7 +297,6 @@ header .overlay {
     font-weight: 700;
 }
 
-
 /*********why choose us**********/
 
 .whyUs {
@@ -323,7 +305,7 @@ header .overlay {
     display: flex;
     justify-content: center;
     margin: auto;
-    text-align: center; 
+    text-align: center;
     background: url('../../assets/images/choosing-bg.jpg') center center / cover;
     padding-bottom: 5rem;
 }
@@ -408,7 +390,6 @@ a.link:hover {
     color: #f5a425;
 }
 
-
 /******timer*********/
 
 .timer {
@@ -480,47 +461,35 @@ a.link:hover {
 }
 
 ::-webkit-input-placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #fff !important;
     opacity: 1;
-    /* Firefox */
 }
 
 ::-moz-placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #fff !important;
     opacity: 1;
-    /* Firefox */
 }
 
 :-ms-input-placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #fff !important;
     opacity: 1;
-    /* Firefox */
 }
 
 ::-ms-input-placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #fff !important;
     opacity: 1;
-    /* Firefox */
 }
 
 ::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #fff !important;
     opacity: 1;
-    /* Firefox */
 }
 
- :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
     color: #fff !important;
 }
 
- ::-ms-input-placeholder {
-    /* Microsoft Edge */
+::-ms-input-placeholder {
     color: #fff !important;
 }
 
@@ -557,8 +526,6 @@ a.link:hover {
     border: none;
     box-shadow: none;
 }
-
-
 /******courses******/
 
 .lesson {
@@ -613,8 +580,6 @@ a.link:hover {
     margin: auto 0;
 }
 
-
-
 .info-fo a.pay {
     color: #f5a425;
 }
@@ -628,9 +593,7 @@ a.link:hover {
     background: #f5a425 !important;
 }
 
-
 /*******end courses**************/
-
 
 /********presentation****************/
 
@@ -711,12 +674,6 @@ a.link:hover {
     cursor: pointer;
 }
 
-
-/**************end presentation***********/
-
-
-/************contact************/
-
 .contact {
     background: url("../../assets/images/contact-bg.jpg") center center / cover;
     padding-bottom: 5rem;
@@ -773,7 +730,6 @@ textarea.form-control {
     height: 3rem;
 }
 
-
 /************footer*************/
 
 footer {
@@ -790,29 +746,34 @@ footer p {
     margin-bottom: 0;
 }
 
-
 /************large devices only ********/
 
 @media (min-width: 1200px) {
+
     /***********header************/
     /***navbar***/
     .navbar-position {
         justify-content: end;
     }
+
     .list-style:hover {
         border: #f5a425 3px solid;
     }
+
     .list-style a:hover {
         color: #fff;
     }
+
     .dropdown-menu a:hover {
         color: #f5a425;
     }
+
     /**presentation ***/
     .presentation {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
+
     .pre-content {
         height: 100vh;
         display: flex;
@@ -824,9 +785,9 @@ footer p {
         justify-items: center;
         justify-self: center;
     }
+
     /*****contact*****/
 }
-
 
 /********** Medium devices only *********/
 
@@ -834,9 +795,11 @@ footer p {
     .list-style:hover {
         border: #f5a425 3px solid;
     }
+
     .list-style a:hover {
         color: #fff !important;
     }
+
     /***presentation****/
     .pre-content {
         height: 100vh;
@@ -849,60 +812,72 @@ footer p {
         justify-items: center;
         justify-self: center;
     }
+
     .contact {
         height: 100vh;
     }
 }
 
-
 /********Small divices only *************/
 
 @media (min-width: 768px) and (max-width: 991px) {
+
     /******why choose us*********/
     .categorie ul li {
         font-size: 15px;
         font-weight: 600;
         justify-content: space-between;
     }
+
     .whyUs .why {
         text-align: center;
     }
+
     .whuUs .icon {
         padding: 4px;
         font-size: 10px;
     }
+
     /***features****/
     .features {
         background-color: rgb(16, 16, 41);
         padding-bottom: 2rem;
     }
+
     .features-post {
         position: initial;
         width: 80%;
         padding: 30px;
         padding-bottom: 0;
     }
+
     .features-content {
         position: initial;
         text-align: justify;
     }
+
     .description h1 {
         font-size: 8vw;
     }
+
     .description p {
         font-size: 20px;
     }
+
     .description button {
         font-size: 15px;
     }
+
     /****presentation****/
     .presentation {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
+
     .presentation h4 {
         font-size: 1.7em;
     }
+
     /* .video-des {
         margin-top: 5rem;
     } */
@@ -912,23 +887,26 @@ footer p {
     }
 }
 
-
 /****** Extra small devices only ********/
 
 @media (max-width: 767px) {
+
     /******why choose us*********/
     .categorie ul li {
         font-size: 15px;
         font-weight: 600;
         justify-content: space-between;
     }
+
     .whyUs .why {
         text-align: center;
     }
+
     .whuUs .icon {
         padding: 4px;
         font-size: 10px;
     }
+
     /***features****/
     .features {
         background-color: rgb(16, 16, 41);
@@ -936,12 +914,14 @@ footer p {
         width: 100%;
         padding: 20px;
     }
+
     .features-post {
         position: initial;
         width: auto;
         margin: auto;
         display: flex;
     }
+
     .features-content {
         position: initial;
         text-align: justify;
@@ -950,39 +930,48 @@ footer p {
         padding: 5px 20px;
     }
 
-    
+
     .description h1 {
         font-size: 7vw;
     }
+
     .description p {
         font-size: 20px;
     }
+
     .description button {
         font-size: 15px;
     }
+
     /***timer*****/
     .number {
         font-size: 6vw;
         font-weight: 700;
     }
+
     .category {
         font-size: 3vw;
     }
+
     /****presentation****/
     .presentation {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
+
     .pre-content {
         text-align: center;
     }
+
     .presentation h4 {
         font-size: 1.7em;
         text-align: center;
     }
+
     .video-des {
         margin-top: 5rem;
     }
+
     /***contact*****/
     .form {
         margin-bottom: 2rem;
@@ -990,23 +979,28 @@ footer p {
 }
 
 @media (max-width: 450px) {
+
     /***nav***/
     .logo {
         font-size: 8vw;
     }
+
     .navbar-dark .navbar-toggler-icon {
         height: 1.2em;
         width: 1.2em;
     }
+
     /******why choose us*********/
     .categorie ul {
         padding: 0;
     }
+
     .categorie ul li {
         font-size: 13px;
         font-weight: normal;
         justify-content: space-between;
     }
+
     .whuUs .icon {
         padding: 3px;
         font-size: 8px;
@@ -1019,52 +1013,53 @@ footer p {
         padding: 0;
         margin: 0;
         position: absolute;
-        top: 100%; /* Position the dropdown menu below the navbar */
+        top: 100%;
         left: 0;
-        background-color: #343a40; /* Set background color */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
-        z-index: 1000; /* Ensure dropdown is above other elements */
-        transition: all 0.3s ease; /* Add smooth transition */
-      }
-    
-      .navbar-collapse.show {
-        display: block; /* Show the dropdown menu when active */
-      }
-    
-      .navbar-nav {
-        flex-direction: column; /* Stack navbar items vertically */
-        padding: 10px; /* Add padding for better spacing */
-      }
-    
-      .nav-item {
-        margin: 0; /* Reset margin for navbar items */
-      }
-    
-      .nav-link {
-        padding: 10px 20px; /* Add padding to navbar links */
-        color: #fff; /* Set text color */
-      }
-    
-      .dropdown-menu {
-        position: static; /* Reset position for dropdown menu */
-        opacity: 1; /* Ensure dropdown menu is fully visible */
-        display: none; /* Hide dropdown menu by default */
-      }
-    .dropdown-toggle{
+        background-color: #343a40;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-collapse.show {
         display: block;
     }
-      .dropdown-menu.show {
-        display: block; /* Show dropdown menu when active */
-      }
-    
-      .dropdown-item {
-        color: #fff; /* Set text color for dropdown items */
-        padding: 10px 20px; /* Add padding for better spacing */
-      }
-    
-      .dropdown-item:hover {
-        background-color: rgba(255, 255, 255, 0.1); /* Add hover effect */
-      }
-    
-  
+
+    .navbar-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+        color: #fff;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        display: none;
+    }
+
+    .dropdown-toggle {
+        display: block;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-item {
+        color: #fff;
+        padding: 10px 20px;
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
 }

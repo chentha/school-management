@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { ServiceService } from '../share/service.service';
 
 @Component({
   selector: 'app-staff',
@@ -8,11 +9,23 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 export class StaffComponent {
 
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private api: ServiceService) { }
 
   ngOnInit() {
     this.initDropdownMenu();
     this.initLinkChooser();
+    this.getDataListAll()
+  }
+
+  getDataListAll(){
+    this.api.getDataList().subscribe(
+      (data:any)=>{
+        console.log('work api',data)
+      },
+      (err:any) =>{
+        console.log('error api',err)
+      }
+    )
   }
 
 

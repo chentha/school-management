@@ -518,11 +518,6 @@ footer p {
         font-size: 10px;
     }
 
-
-
-    /* .video-des {
-        margin-top: 5rem;
-    } */
     /******contact********/
     .form {
         margin-bottom: 2rem;
@@ -573,57 +568,9 @@ footer p {
         padding: 5px 20px;
     }
 
-
-    .description h1 {
-        font-size: 7vw;
-    }
-
-    .description p {
-        font-size: 20px;
-    }
-
-    .description button {
-        font-size: 15px;
-    }
-
-    /***timer*****/
-    .number {
-        font-size: 6vw;
-        font-weight: 700;
-    }
-
-    .category {
-        font-size: 3vw;
-    }
-
-    /****presentation****/
-    .presentation {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-
-    .pre-content {
-        text-align: center;
-    }
-
-    .presentation h4 {
-        font-size: 1.7em;
-        text-align: center;
-    }
-
-    .video-des {
-        margin-top: 5rem;
-    }
-
-    /***contact*****/
-    .form {
-        margin-bottom: 2rem;
-    }
 }
 
 @media (max-width: 450px) {
-
-
     /***nav***/
     .logo {
         font-size: 8vw;
@@ -665,16 +612,11 @@ footer p {
         margin: 0;
         position: absolute;
         top: 100%;
-        /* Position the dropdown menu below the navbar */
         left: 0;
         background-color: #343a40;
-        /* Set background color */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        /* Add shadow for better visibility */
         z-index: 1000;
-        /* Ensure dropdown is above other elements */
         transition: all 0.3s ease;
-        /* Add smooth transition */
     }
 
     .navbar-collapse.show {
@@ -692,18 +634,13 @@ footer p {
 
     .nav-link {
         padding: 10px 20px;
-        /* Add padding to navbar links */
         color: #fff;
-        /* Set text color */
     }
 
     .dropdown-menu {
         position: static;
-        /* Reset position for dropdown menu */
         opacity: 1;
-        /* Ensure dropdown menu is fully visible */
         display: none;
-        /* Hide dropdown menu by default */
     }
 
     .dropdown-toggle {
